@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.7.1"
+  version: "0.7.2"
 
 package:
   name: llama-index-llms-openai-like
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/llama-index-llms-openai-like/llama_index_llms_openai_like-${{ version }}.tar.gz
-  sha256: ce7cef3686b1e62d7c08134b4d8ca56706cca816e4c4098eaede33002829a6f9
+  sha256: ed9ff73f975dce470f98ac61c982151ba78eedfa3fb9b03894bc1d1312b213ff
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
