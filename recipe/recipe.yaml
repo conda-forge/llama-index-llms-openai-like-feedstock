@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.0"
+  version: 0.8.1
 
 package:
   name: llama-index-llms-openai-like
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/llama-index-llms-openai-like/llama_index_llms_openai_like-${{ version }}.tar.gz
-  sha256: 459f115ca343c96252b9d123986056193a7d088f64f73c5336ce381e02c9d6d2
+  sha256: 1b6f973bba97cb4ce6c71feb54c2fa6834a071ec1c4b26636dc603b818d07b0b
 
 build:
   number: 0
@@ -23,9 +23,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - llama-index-llms-openai >=0.7.0,<0.8
+    - llama-index-llms-openai >=0.8.0,<0.9
     - llama-index-core >=0.14.3,<0.15
-
 tests:
   - python:
       imports:
@@ -33,7 +32,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   summary: llama-index llms openai like integration
